@@ -2,9 +2,17 @@
 
 # 宗旨：没有版本特殊要求的，能用apt-get安装最好，不需要编译，不会出一堆问题。
 
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+echo 'LANGUAGE="en_US.UTF-8"' >> /etc/default/locale
+echo 'LC_ALL="en_US.UTF-8"' >> /etc/default/locale
+echo 'LANG="en_US.UTF-8"' >> /etc/default/locale
+
 # normal apt installs
-apt-get update
-apt-get upgrade -y
+# apt-get update
+# apt-get upgrade -y
+
 
 # use apt to install below libs other than pip3 install from requirement.txt in chipwhisperer, because pip install need to build wheels may need big swap and also some times fail with other reason
 apt-get install -y python3-scipy
@@ -18,8 +26,8 @@ apt-get install -y python3-keras
 apt-get install -y python3-sklearn
 
 # normal install
-apt-get install -y python3
-apt-get install -y python3-pip
+# apt-get install -y python3
+# apt-get install -y python3-pip
 apt-get install -y python3-tk #for matplotlib/lascar
 apt-get install -y git
 apt-get install -y gcc-avr
@@ -28,15 +36,15 @@ apt-get install -y gcc-arm-none-eabi
 apt-get install -y make
 
 # to fix some issue
-apt-get install zlib1g-dev libjpeg-dev libpng-dev
-apt-get install libfreetype6-dev
-apt-get install pkg-config
-apt-get install libblas-dev liblapack-dev
-apt-get install gfortran
-apt-get install libzmq3-dev
-apt-get install libhdf5-dev
+apt-get install -y zlib1g-dev libjpeg-dev libpng-dev
+apt-get install -y libfreetype6-dev
+apt-get install -y pkg-config
+apt-get install -y libblas-dev liblapack-dev
+apt-get install -y gfortran
+apt-get install -y libzmq3-dev
+apt-get install -y libhdf5-dev
 # solve the pgen not found issue
-apt-get install cython3
+apt-get install -y cython3
 
 # pip installs
 python3 -m pip install --upgrade pip
