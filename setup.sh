@@ -88,7 +88,7 @@ udevadm control --reload-rules
 # chown -R vagrant:vagrant /home/vagrant/run_jupyter.sh
 # chmod +x /home/vagrant/run_jupyter.sh
 
-cp /kali-cw-setup/run_jupyter.sh /root/run_jupyter.sh
+cp /root/kali-cw-setup/run_jupyter.sh /root/run_jupyter.sh
 chmod +x /root/run_jupyter.sh
 
 # jupyter stuff
@@ -96,7 +96,7 @@ jupyter contrib nbextension install --system
 
 # copy jupyter config
 mkdir -p /root/.jupyter
-cp /kali-cw-setup/jupyter_notebook_config.py /root/.jupyter/
+cp /root/kali-cw-setup/jupyter_notebook_config.py /root/.jupyter/
 
 # make sure jupyter is under the vagrant user
 # maybe just make /home/vagrant all vagrant?
