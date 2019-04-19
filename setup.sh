@@ -45,6 +45,7 @@ apt-get install -y libzmq3-dev
 apt-get install -y libhdf5-dev
 # solve the pgen not found issue
 apt-get install -y cython3
+apt-get install -y jupyter-notebook
 
 # pip installs
 python3 -m pip install --upgrade pip
